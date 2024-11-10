@@ -1,10 +1,17 @@
+/*
+This script is designed to handle interactions with a "fire stone" object in a tower defense game. 
+When the player clicks on the fire stone, the game checks if they have enough gold to place a tower. 
+If they can afford it, the stone is destroyed, and a tower is placed at that position. 
+If the player can’t afford the tower, a warning message is displayed in the console.
+*/
+
 using UnityEngine;
 
 public class FireStoneController : MonoBehaviour
 {
-    public GameObject stoneBuilder;
-    public GameObject towerPrefab; // Assign the appropriate tower prefab
-    public int towerCost = 50; // The cost of the tower
+    public GameObject stoneBuilder; //Reference to the stone builder object
+    public GameObject towerPrefab;  // Assign the appropriate tower prefab
+    public int towerCost = 50;      // The cost of the tower
 
     void OnMouseDown()
     {
@@ -14,10 +21,10 @@ public class FireStoneController : MonoBehaviour
             GameManager.instance.SpendGold(towerCost);
             Destroy(stoneBuilder);
 
-            // Instantiate the selected tower
+            // Placing the selected tower
             Instantiate(towerPrefab, transform.position, Quaternion.identity);
 
-            // Optionally, you can also destroy the stone itself if needed
+            // Destroying stone object after placing tower
             Destroy(gameObject);
         }
         else

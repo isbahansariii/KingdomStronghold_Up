@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/*
+This script controls an enemy character’s movement along a series of predefined waypoints.
+The enemy starts at the first waypoint and moves toward each subsequent waypoint (at a set speed)
+until it reaches the last waypoint.
+*/
+
+using UnityEngine;
 
 public class FollowThePath : MonoBehaviour {
 

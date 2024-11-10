@@ -1,9 +1,17 @@
+/*
+THis deals with 
+- player’s score and gold balance, 
+- updating the UI elements that display score and balance values. 
+- It also allows for modifying the score and gold based on in-game events like earning points or 
+  purchasing items. 
+*/
+
 using UnityEngine;
-using TMPro;
+using TMPro;        //because, using TextMeshPro components
 
 public class GameManager : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText; // Make sure this is assigned in the Inspector or dynamically
+    public TextMeshProUGUI scoreText; 
     public TextMeshProUGUI goldText;
 
     public int score = 0;
@@ -11,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
+    // Awake method to initialize the Singleton pattern (design pattern that ensures that class has only one instance)
     void Awake()
     {
         if (instance == null)

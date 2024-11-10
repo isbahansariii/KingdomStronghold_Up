@@ -1,5 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+/*
+This script manages the end-of-level and game-over conditions, 
+making sure the game recognizes when the player has either defeated all enemies (level cleared) 
+or needs to display a game-over screen.
+*/
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,12 +16,13 @@ public class GameOverManager : MonoBehaviour
 
     private bool isGameOver = false; // Add a flag to prevent repeated game over logic
 
+    // Awake method to initialize the Singleton pattern (design pattern that ensures that class has only one instance)
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Optional: Persist across scenes
+            DontDestroyOnLoad(gameObject); // Persist across scenes
         }
         else
         {
@@ -36,32 +40,24 @@ void Update()
 }
 
 
-    void LevelCleared()
-    {
-        isGameOver = true; // Set the flag to true to prevent further execution
-        SceneManager.LoadScene(2); // Load Game Over or Level Cleared scene
-        Debug.Log("Level Cleared! Total Score: " + GameManager.instance.GetScore());
-    }
-
-
     
 public void GameOver()
 {
     if (SceneManager.GetActiveScene().buildIndex != 2)  // Assuming scene 2 is the Game Over screen
     {
-        SceneManager.LoadScene(2); // gameOverScreen popup
+        SceneManager.LoadScene(2);  // gameOverScreen popup
         Debug.Log("Game Over! You lost!");
-        Time.timeScale = 0; // Stop the game
+        Time.timeScale = 0;         // Stop the game
     }
 }
 
-    public void DisplayFinalScore()
+public void DisplayFinalScore()
 {
     int finalScore = GameManager.instance.GetScore();  // Get the score from GameManager
     Debug.Log("Level Cleared! Total Score: " + finalScore);
 }
 
-    public void ResetGameOverManager()
+public void ResetGameOverManager()
 {
     enemyCount = 0; // Reset the enemy count
 }

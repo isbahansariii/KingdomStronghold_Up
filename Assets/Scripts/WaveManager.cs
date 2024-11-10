@@ -1,3 +1,13 @@
+/*
+- Wave Management:  Controls spawning of enemies in waves, handling wave progression.
+- Enemy Spawning:   Spawns random enemies at random spawn points each wave.
+- Wave Progression: Updates the wave number and increases the number of enemies 
+                    as waves progress.
+- UI Interaction:   Updates the wave display and controls the "Start Wave" button 
+                    to initiate the next wave.
+*/
+
+
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
@@ -19,7 +29,7 @@ public class WaveManager : MonoBehaviour
     {
         // Set button listener and disable button at the start
         waveButton.onClick.AddListener(StartWave);
-        waveButton.interactable = true;
+        waveButton.interactable = true;         //initally waveButton is active 
         waveText.text = "Wave: " + currentWave;
     }
 

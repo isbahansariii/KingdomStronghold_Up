@@ -1,3 +1,8 @@
+/*
+It manages the display of the final score, the outcome statement, 
+and provides functionality for restarting the game or returning to the home screen. 
+*/
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
