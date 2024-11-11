@@ -5,6 +5,7 @@ Once the enemy’s health reaches zero or it takes a set number of hits, it dies,
 The health bar is positioned above the enemy and becomes visible upon taking damage.
 This also triggering game events like adding score and rewards. 
 */
+
 using UnityEngine;
 using UnityEngine.UI;  // Required for Slider and Image components to control health bar
 

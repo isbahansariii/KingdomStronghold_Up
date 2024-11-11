@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class GameOverManager : MonoBehaviour
 {
     public static GameOverManager instance;
+    
 
     // Enemy count
     public int enemyCount = 0;
@@ -61,5 +62,10 @@ public void ResetGameOverManager()
 {
     enemyCount = 0; // Reset the enemy count
 }
+
+    public void CrossClicked()
+    {
+        SceneManager.LoadScene(2);
+    }
 
 }
