@@ -1,5 +1,5 @@
 # KINGDOM STRONGHOLD
-# Kingdom Stronghold – Protect Your Realm
+- Kingdom Stronghold – Protect Your Realm
 
 # Storyline
   In the past, kingdoms were often attacked by strong enemies who wanted to destroy and take over. To protect their land, the kingdoms built powerful towers to fight back. Kingdom Stronghold is based on this idea, where you play as the defender of a kingdom. Your job is to manage and use towers to keep your kingdom safe from dangerous enemies. It’s a game of strategy and quick thinking to stop the enemies from getting through your defenses.
