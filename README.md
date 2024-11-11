@@ -9,7 +9,7 @@
 - Blueman 
 
 # Towers
-- Lava Tower - A tower that shoots molten lava, burning enemies from a distance. It’s slow but powerful.
+- Lava Tower - A tower that shoots molten lava, burning enemies from a distance.
 - Stone Tower - A sturdy tower that fires large stones at enemies. It’s balanced in terms of damage and speed.
 - Rock Tower - A tower built to shoot rocks at a fast rate, dealing moderate damage with speed and agility.
 - Archery Tower - A tower with the ability to shoot arrows, excellent for hitting fast-moving enemies at a distance.
